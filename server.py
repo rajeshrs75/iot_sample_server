@@ -9,8 +9,8 @@ import time
 
 app = Bottle(__name__)
 
-client = MongoClient('')
-db = client.db_name
+#client = MongoClient('')
+#db = client.db_name
 
 @app.hook('after_request')
 def enable_cors():
