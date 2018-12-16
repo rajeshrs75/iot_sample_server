@@ -23,17 +23,17 @@ def enable_cors():
 def root():
 	return {'data': 'Server root'}
 
-@app.route('/led')
-def led():
+# @app.route('/led')
+# def led():
 
-	cur = db.led.find()
-	data = json.loads(dumps(cur))
+# 	cur = db.led.find()
+# 	data = json.loads(dumps(cur))
 	
-	return data[0]['val']
+# 	return data[0]['val']
 
-@app.route('/led/<val>')
-def led(val):
+# @app.route('/led/<val>')
+# def led(val):
 
-	cur = db.led.update({"_id": ObjectId("")}, {'$set': {'val': str(val)}})
+# 	cur = db.led.update({"_id": ObjectId("")}, {'$set': {'val': str(val)}})
 
-	return "LED Val: " + str(val)
+# 	return "LED Val: " + str(val)
